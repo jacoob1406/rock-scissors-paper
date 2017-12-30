@@ -1,0 +1,178 @@
+$bgcol: #232B2B;
+$col1: #dc3d24;
+$col2: #e3ae57;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $color: $default) {
+    box-shadow: $x-axis $y-axis $blur $color;
+}
+
+%images{
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+%score{
+    color: $col1;
+    font-size: 3em;
+    padding: 0 5px;
+    border: 1px solid $col2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+
+
+body{
+    background: $bgcol;
+}
+
+h1{
+    margin-top: 50px;
+    border-bottom: 2px solid $col2;
+    color: #ffffff;
+}
+
+h2{
+    color: $col1;
+    margin-bottom: 50px;
+}
+
+.container{
+    display: grid;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 3px;
+
+    .buttons{
+
+        .allbuttons{
+            display: block;
+            width:80%;
+            margin-bottom: 25px;
+            @include border-radius(50px); 
+            border: 0;
+            cursor: pointer;
+            height: 45px;
+            background-color: $col2;
+            color: $bgcol;
+            font-size: 1.5em;
+
+            &:active{
+                opacity: 0.7;
+            }
+
+            &:hover{
+                border: 1px solid $col1;
+            }
+
+            &:last-of-type{
+                background-color: $col1;
+                color: $bgcol;
+                font-weight: bold;
+                letter-spacing: 2px;
+                margin-top: 40px;;
+
+                &:hover{
+                    border: 1px solid $col2;
+                }
+            }
+        }
+
+    }
+
+    .player{
+        img{
+            @extend %images;
+            @include border-radius(50px);
+            @include box-shadow(3px, 3px, 3px, $col2);
+        } 
+
+        #score-player{
+            @extend %score;
+            @include border-radius(20%);
+        }
+    }
+
+    .computer{
+
+        img{
+            @extend %images;
+            @include border-radius(50px); 
+            @include box-shadow(3px, 3px, 3px, $col1);
+        }  
+
+        #score-computer{
+            @extend %score;
+            @include border-radius(20%);
+        }
+    }
+}
+
+@media (max-width: 850px){
+    .container{
+        width: 96%;
+        .buttons{
+            .allbuttons{
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    h1{
+        font-size: 1em;
+    }
+
+    .container{
+        grid-template-columns: repeat(12, 1fr);
+        margin-bottom: 25px;
+
+        .buttons{
+            grid-column: span 12;
+
+            .allbuttons{
+                display: inline;
+                width: 24%;
+            }
+        }
+
+        .player{
+            grid-column: span 6;
+        }
+
+        .computer{
+            grid-column: span 6;
+        }
+    }
+}
+
+@media (max-width: 330px){
+    .container .buttons .allbuttons {
+        display: block;
+        width: 100%; 
+        margin: 3px 0;
+
+        &:last-of-type{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
