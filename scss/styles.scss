@@ -27,6 +27,26 @@ $col2: #e3ae57;
     border: 1px solid $col2;
 }
 
+%buttons{
+    display: block;
+    margin-bottom: 25px;
+    @include border-radius(50px); 
+    border: 0;
+    cursor: pointer;
+    height: 45px;
+    background-color: $col2;
+    color: $bgcol;
+    font-size: 1.5em;
+
+    &:active{
+        opacity: 0.7;
+    }
+
+    &:hover{
+        border: 1px solid $col1;
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -51,8 +71,45 @@ h2{
     margin-bottom: 50px;
 }
 
+.intro{
+    //display: none;
+    h3{
+        display: block;
+        margin-bottom: 25px;
+        @include border-radius(50px); 
+        border: 0;
+        height: 45px;
+        background-color: $col2;
+        padding-top: 7px;
+        color: $bgcol;
+        font-size: 1.5em;
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .allbuttons{
+        @extend %buttons;
+        width: 50%;
+        margin-left: 25%;
+    }
+    #play{
+        background-color: $col1;
+        color: $bgcol;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-top: 40px;;
+        width: 40%;
+        margin-left: 30%;
+
+        &:hover{
+            border: 1px solid $col2;
+        }
+    }
+}
+
 .container{
-    display: grid;
+    //display: grid;
+    display: none;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -63,24 +120,8 @@ h2{
     .buttons{
 
         .allbuttons{
-            display: block;
+            @extend %buttons;
             width:80%;
-            margin-bottom: 25px;
-            @include border-radius(50px); 
-            border: 0;
-            cursor: pointer;
-            height: 45px;
-            background-color: $col2;
-            color: $bgcol;
-            font-size: 1.5em;
-
-            &:active{
-                opacity: 0.7;
-            }
-
-            &:hover{
-                border: 1px solid $col1;
-            }
 
             &:last-of-type{
                 background-color: $col1;
@@ -125,6 +166,70 @@ h2{
     }
 }
 
+.outrowin, .outrolost{
+    display: none;
+    h1{
+        margin: 0 20% 3% 20%;
+    }
+    h3{
+        display: block;
+        margin-bottom: 25px;
+        @include border-radius(50px); 
+        border: 0;
+        height: 45px;
+        background-color: $col2;
+        padding-top: 7px;
+        color: $bgcol;
+        font-size: 1.5em;
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .allbuttons{
+        @extend %buttons;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .no{
+        background-color: $col1;
+        color: $bgcol;
+        font-weight: bold;
+        letter-spacing: 2px;
+        width: 40%;
+        margin-left: 30%;
+
+        &:hover{
+            border: 1px solid $col2;
+        }
+    }
+}
+
+.thankyou{
+    display: none;
+    h1{
+        color: $col2;
+        border-bottom: 2px solid $col1;
+        margin: 0 20% 3% 20%;
+    }
+
+    span{
+        font-size: 3em;
+        @extend %score;
+        @include border-radius(20%);
+        font-weight: bold;
+    }
+}
+
+footer{
+    font-size: 0.6em;
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    background: $col2;
+    border-top: 1px solid $col1;
+}
+
 @media (max-width: 850px){
     .container{
         width: 96%;
@@ -160,6 +265,23 @@ h2{
 
         .computer{
             grid-column: span 6;
+        }
+    }
+
+    .intro{
+        h3, .allbuttons, #play{
+            width: 90%;
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+    }
+
+    .outrowin, .outrolost{
+
+        h3, .allbuttons, .no{
+            width: 90%;
+            margin-right: 5%;
+            margin-left: 5%;
         }
     }
 }

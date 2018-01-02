@@ -18,7 +18,12 @@ and open the template in the editor.
             <h2>HOW LUCKY ARE YOU?</h2>
         </header>
         <section class="main-section">
-            <div class="container">
+            <div class="intro" id="intro">
+                <h3>Points to win?</h3>
+                <input type="number" class="allbuttons" value="1"  min="1" max="99" id="pointsvalue" onkeypress="return isNumberKey(event)"/>
+                <button class="allbuttons" id="play">~PLAY~</button>
+            </div>
+            <div class="container" id="container">
                 <div class="buttons">
                     <button class="allbuttons" id="rock">ROCK</button>
                     <button class="allbuttons" id="scissors">SCISSORS</button>
@@ -26,17 +31,36 @@ and open the template in the editor.
                     <button class="allbuttons" id="reset">RESET</button>
                 </div>
                 <div class="player">
-                    <img src="media/question.png" alt="player-choice" id="img-player">
+                    <img src="media/question.jpg" alt="player-choice" id="img-player">
                     <br>
                     <span id="score-player">0</span> 
                 </div>
                 <div class="computer">
-                    <img src="media/question.png" alt="computer-choice" id="img-computer">
+                    <img src="media/computer.jpg" alt="computer-choice" id="img-computer">
                     <br>
                     <span id="score-computer">0</span>  
                 </div> 
             </div>
+            <div class="outrowin" id="outrowin">
+                <h1>YOU WON!</h1>
+                <h3>Do you want to play again?</h3>
+                <button class="allbuttons yes" id="yes1">~YES~</button>
+                <button class="allbuttons no" id="no1">NO</button>
+            </div>
+            <div class="outrolost" id="outrolost">
+                <h1>YOU LOST! &#9785;</h1>
+                <h3>Do you want to play again?</h3>
+                <button class="allbuttons yes" id="yes2">~YES~</button>
+                <button class="allbuttons no" id="no2">NO</button>
+            </div>
+            <div class="thankyou" id="thankyou">
+                <h1>THANK YOU FOR PLAYING!</h1>
+                <span id="count-five">3</span>
+            </div>
         </section>
+        <footer>
+            Made by Jakub Lemka
+        </footer>
         <script src="js/script.js" type="text/javascript" async></script>
     </body>
 </html>
