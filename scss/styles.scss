@@ -181,22 +181,22 @@ h2{
         padding-top: 7px;
         color: $bgcol;
         font-size: 1.5em;
-        width: 40%;
-        margin-left: 30%;
+        width: 50%;
+        margin-left: 25%;
     }
 
     .allbuttons{
         @extend %buttons;
-        width: 50%;
-        margin-left: 25%;
+        width: 60%;
+        margin-left: 20%;
     }
     .no{
         background-color: $col1;
         color: $bgcol;
         font-weight: bold;
         letter-spacing: 2px;
-        width: 40%;
-        margin-left: 30%;
+        width: 50%;
+        margin-left: 25%;
 
         &:hover{
             border: 1px solid $col2;
@@ -230,6 +230,8 @@ footer{
     border-top: 1px solid $col1;
 }
 
+
+
 @media (max-width: 850px){
     .container{
         width: 96%;
@@ -237,6 +239,13 @@ footer{
             .allbuttons{
                 font-size: 1em;
             }
+        }
+    }
+    .outrowin, .outrolost{
+        h3{
+            width: auto;
+            margin-left: 14%;
+            margin-right: 14%;
         }
     }
 }
@@ -286,6 +295,16 @@ footer{
     }
 }
 
+@media (max-width: 400px){
+    .outrowin, .outrolost{
+
+        h3{
+            font-size: 1.2em;
+            padding-top: 10px;
+        }
+    }
+}
+
 @media (max-width: 330px){
     .container .buttons .allbuttons {
         display: block;
@@ -295,6 +314,14 @@ footer{
         &:last-of-type{
             margin-top: 10px;
             margin-bottom: 10px;
+        }
+    }
+
+    .outrowin, .outrolost{
+
+        h3{
+            font-size: 1.1em;
+            padding-top: 12px;
         }
     }
 }

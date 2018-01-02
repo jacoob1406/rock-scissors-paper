@@ -134,18 +134,18 @@ h2 {
     padding-top: 7px;
     color: #232B2B;
     font-size: 1.5em;
-    width: 40%;
-    margin-left: 30%; }
-  .outrowin .allbuttons, .outrolost .allbuttons {
     width: 50%;
     margin-left: 25%; }
+  .outrowin .allbuttons, .outrolost .allbuttons {
+    width: 60%;
+    margin-left: 20%; }
   .outrowin .no, .outrolost .no {
     background-color: #dc3d24;
     color: #232B2B;
     font-weight: bold;
     letter-spacing: 2px;
-    width: 40%;
-    margin-left: 30%; }
+    width: 50%;
+    margin-left: 25%; }
     .outrowin .no:hover, .outrolost .no:hover {
       border: 1px solid #e3ae57; }
 
@@ -176,7 +176,12 @@ footer {
   .container {
     width: 96%; }
     .container .buttons .allbuttons {
-      font-size: 1em; } }
+      font-size: 1em; }
+
+  .outrowin h3, .outrolost h3 {
+    width: auto;
+    margin-left: 14%;
+    margin-right: 14%; } }
 @media (max-width: 600px) {
   h1 {
     font-size: 1em; }
@@ -203,6 +208,10 @@ footer {
     width: 90%;
     margin-right: 5%;
     margin-left: 5%; } }
+@media (max-width: 400px) {
+  .outrowin h3, .outrolost h3 {
+    font-size: 1.2em;
+    padding-top: 10px; } }
 @media (max-width: 330px) {
   .container .buttons .allbuttons {
     display: block;
@@ -210,6 +219,10 @@ footer {
     margin: 3px 0; }
     .container .buttons .allbuttons:last-of-type {
       margin-top: 10px;
-      margin-bottom: 10px; } }
+      margin-bottom: 10px; }
+
+  .outrowin h3, .outrolost h3 {
+    font-size: 1.1em;
+    padding-top: 12px; } }
 
 /*# sourceMappingURL=styles.css.map */
