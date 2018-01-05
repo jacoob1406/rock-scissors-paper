@@ -71,6 +71,24 @@ h2{
     margin-bottom: 50px;
 }
 
+h6{
+    color: $col2;
+
+    span{
+        color: $col1;
+        text-decoration: none;
+
+        a{
+            text-decoration: none;
+            color: $col1;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
 .intro{
     //display: none;
     h3{
@@ -219,7 +237,7 @@ h2{
         font-weight: bold;
     }
 }
-
+/*
 footer{
     font-size: 0.6em;
     width: 100%;
@@ -228,8 +246,7 @@ footer{
     bottom: 0;
     background: $col2;
     border-top: 1px solid $col1;
-}
-
+}*/
 
 
 @media (max-width: 850px){
