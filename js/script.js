@@ -37,7 +37,9 @@ window.onload = function () {
     playBut.onclick = function () {
         toWin = Number(document.getElementById('pointsvalue').value);
         changeDisplay('intro', 'none');
+
         changeDisplay('container', 'grid');
+        changeDisplay('container', '-ms-grid');
     };
     rockBut.onclick = function () {
         playerChoice = 'rock';
@@ -63,6 +65,7 @@ window.onload = function () {
     function sayYes() {
         changeDisplay('outrowin', 'none');
         changeDisplay('outrolost', 'none');
+        changeDisplay('container', '-ms-grid');
         changeDisplay('container', 'grid');
         reset();
     }

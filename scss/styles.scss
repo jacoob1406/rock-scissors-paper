@@ -134,6 +134,9 @@ h6{
     grid-template-columns: 20% 40% 40%;
     grid-template-rows: repeat(1, 1fr);
     grid-gap: 3px;
+    -ms-grid-template-columns: 20% 40% 40%;
+    -ms-grid-template-rows: repeat(1, 1fr);
+    -ms-grid-gap: 3px;
 
     .buttons{
 
@@ -249,7 +252,7 @@ footer{
 }*/
 
 
-@media (max-width: 850px){
+@media screen and (max-width: 850px){
     .container{
         width: 96%;
         .buttons{
@@ -267,17 +270,19 @@ footer{
     }
 }
 
-@media (max-width: 600px){
+@media screen and (max-width: 600px){
     h1{
         font-size: 1em;
     }
 
     .container{
         grid-template-columns: repeat(12, 1fr);
+        -ms-grid-template-columns: repeat(12, 1fr);
         margin-bottom: 25px;
 
         .buttons{
             grid-column: span 12;
+            -ms-grid-column: span 12;
 
             .allbuttons{
                 display: inline;
@@ -287,10 +292,12 @@ footer{
 
         .player{
             grid-column: span 6;
+            -ms-grid-column: span 6;
         }
 
         .computer{
             grid-column: span 6;
+            ma-grid-column: span 6;
         }
     }
 
@@ -312,7 +319,7 @@ footer{
     }
 }
 
-@media (max-width: 400px){
+@media screen and (max-width: 400px){
     .outrowin, .outrolost{
 
         h3{
@@ -322,7 +329,7 @@ footer{
     }
 }
 
-@media (max-width: 330px){
+@media screen and (max-width: 330px){
     .container .buttons .allbuttons {
         display: block;
         width: 100%; 
